@@ -1,2 +1,2 @@
 # notekeepr
-simple notes vanilla js note app using local storage
+simple vanilla js note app. Save to local storage
