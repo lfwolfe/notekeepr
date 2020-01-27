@@ -1,0 +1,71 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  margin: 20px;
+}
+
+.container.add-note {
+  display: none;
+}
+.container.add-note.show {
+  display: flex;
+}
+
+.container.my-notes.hide {
+  display: none;
+}
+
+h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+.row {
+  display: flex;
+  width: 100%;
+  margin: 1rem;
+}
+
+#note,
+#title {
+  flex: 1;
+}
+label {
+  margin-right: 1rem;
+}
+.button {
+  float: right;
+  margin: 0 0 0 1rem;
+  width: 4rem;
+  color: #455a64;
+  cursor: pointer;
+}
+.button:hover {
+  color: #000;
+}
+.submit {
+  display: block;
+}
+.notes-list li {
+  color: #455a64;
+  cursor: pointer;
+}
+.notes-list li:hover {
+  color: #000;
+  cursor: pointer;
+}
+
+@media (max-width: 40em) {
+  .row {
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 40em) {
+  .container {
+    width: 60%;
+    margin: 20px auto;
+  }
+}

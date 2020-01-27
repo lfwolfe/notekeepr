@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Notekeepr</title>
+    <link type="text/css" rel="stylesheet" href="reset.css" />
+    <link type="text/css" rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>Notekeepr</h1>
+    <div class="container my-notes">
+      <div class="row">
+        <label for="title">Search:</label
+        ><input name="search-title" id="search-title" type="text" />
+      </div>
+      <div class="row submit">
+        <input class="button add-note-button" type="button" value="+ New" />
+      </div>
+      <div class="row notes-list"></div>
+    </div>
+    <div class="container add-note">
+      <div class="row">
+        <label for="title">Title:</label
+        ><input name="title" id="title" type="text" />
+      </div>
+      <div class="row">
+        <label for="note">Note:</label
+        ><textarea name="note" id="note" cols="30" rows="10"></textarea>
+      </div>
+      <div class="row submit">
+        <input class="button save" type="button" value="Save" />
+        <input class="button cancel" type="button" value="Cancel" />
+      </div>
+    </div>
+    <script type="" src="utilities.js"></script>
+    <script type="" defer src="notekeepr.js"></script>
+  </body>
+</html>
