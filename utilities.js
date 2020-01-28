@@ -1,9 +1,9 @@
-//These utility functions should have generic names since they
-//are utility functions but used these names for self commenting
+//NOTE: These utility functions could have better names and can be a bit more generic
 /**
  * adds gets new hash Id and adds note to notes
- * @param {object} note
- * @param {array of objects} notes
+ * @param {Object} note
+ * @param {Array} notes
+ * @return {Array}
  */
 const addNote = (note, notes) => {
   let noteId = getNoteHash(note.title);
@@ -14,7 +14,8 @@ const addNote = (note, notes) => {
 
 /**
  * generates a simple hash from title for note id
- * @param {string} title
+ * @param {String} title
+ * @return {Number}
  */
 const getNoteHash = title => {
   const input = [...title];
@@ -26,8 +27,9 @@ const getNoteHash = title => {
 
 /**
  * updates note in array of notes
- * @param {string} note
- * @param {array of strings} notes
+ * @param {Object} note
+ * @param {Array} notes
+ * @return {Array}
  */
 const updateNote = (note, notes) => {
   let updatedNotes = notes.reduce((prev, curr) => {
@@ -42,9 +44,10 @@ const updateNote = (note, notes) => {
 };
 
 /**
- *
- * @param {string} searchTerm
- * @param {array of objects} notes
+ *  filters an array by searchTerm
+ * @param {String} searchTerm
+ * @param {Array} notes
+ * @returns {Array}
  */
 const searchNotes = (searchTerm, notes) => {
   let results = notes;
@@ -57,8 +60,8 @@ const searchNotes = (searchTerm, notes) => {
 };
 
 /**
- *
- * @param {string} id
+ * get Object from localstorage
+ * @param {String} id
  */
 const fetchFromLocalStorage = id => {
   const item = localStorage.getItem(id);
@@ -66,9 +69,9 @@ const fetchFromLocalStorage = id => {
 };
 
 /**
- *
- * @param {string} id
- * @param {array of object} value
+ * save Array to localStorage key = id
+ * @param {String} id
+ * @param {Array} value
  */
 const saveToLocalStorage = (id, value) => {
   localStorage.setItem(id, JSON.stringify(value));

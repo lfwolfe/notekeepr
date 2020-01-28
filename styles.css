@@ -48,9 +48,15 @@ label {
 .submit {
   display: block;
 }
+.notes-list ul {
+  overflow: hidden;
+}
 .notes-list li {
   color: #455a64;
   cursor: pointer;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .notes-list li:hover {
   color: #000;

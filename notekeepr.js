@@ -107,6 +107,7 @@ const displayNotes = notes => {
     liRef.innerText = curr.title;
     liRef.setAttribute("data-note-id", curr.id);
     liRef.setAttribute("data-type", "update");
+    liRef.setAttribute("title", curr.title);
     liRef.addEventListener("click", openNewNoteFormHandler);
     prev.appendChild(liRef);
     return prev;
